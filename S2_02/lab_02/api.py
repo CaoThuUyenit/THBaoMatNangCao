@@ -6,7 +6,7 @@ caesar_cipher = CaesarCipher()
 
 @app.route("/api/caesar/encrypt", methods=["POST"])
 def caeser_encrypt():
-    data = request.json()
+    data = request.json
     print(f"Received data: {data}")
     if not data:
         return jsonify({"error": "Missing JSON body"}), 400
@@ -23,7 +23,7 @@ def caeser_encrypt():
 
 @app.route("/api/caesar/decrypt", methods=["POST"])
 def caeser_decrypt():
-    data = request.json()
+    data = request.json
     print(f"Received data: {data}")
     if not data:
         return jsonify({"error": "Missing JSON body"}), 400
